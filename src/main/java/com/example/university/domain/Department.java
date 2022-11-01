@@ -22,6 +22,9 @@ public class Department {
     @OneToMany(mappedBy = "department", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Course> courses = new ArrayList<>();
 
+    @Embedded
+    private Staff chair;
+
     public Department(String name) {
         this.name = name;
     }

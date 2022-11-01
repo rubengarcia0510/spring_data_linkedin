@@ -21,6 +21,9 @@ public class Course {
     @JoinColumn
     private Department department;
 
+    @Embedded
+    private Staff instructor;
+
     public Course(String name, Department department) {
         this.name = name;
         this.department = department;
