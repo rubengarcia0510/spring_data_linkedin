@@ -32,6 +32,11 @@ public class Department {
     protected Department() {
     }
 
+    public Department(String name, Staff chair) {
+        this.name = name;
+        this.chair = chair;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -17,6 +17,9 @@ public class Course {
     @Column
     private String name;
 
+    @Column
+    private int credits;
+
     @ManyToOne
     @JoinColumn
     private Department department;
@@ -27,6 +30,13 @@ public class Course {
     public Course(String name, Department department) {
         this.name = name;
         this.department = department;
+    }
+
+    public Course(String name, int credits, Staff instructor, Department department) {
+        this.name = name;
+        this.credits = credits;
+        this.department = department;
+        this.instructor = instructor;
     }
 
     protected Course() {

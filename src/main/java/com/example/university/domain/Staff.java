@@ -10,8 +10,15 @@ public class Staff {
     @Column(name = "id", nullable = false)
     private Integer id;
 
+    public Staff(Person member) {
+        this.member = member;
+    }
+
     @Embedded
     private Person member;
+
+
+
 
     public Integer getId() {
         return id;
