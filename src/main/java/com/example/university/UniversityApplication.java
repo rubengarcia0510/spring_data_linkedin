@@ -3,7 +3,6 @@ package com.example.university;
 import com.example.university.domain.*;
 import com.example.university.repo.CourseRepository;
 import com.example.university.repo.DepartmentRepository;
-import com.example.university.repo.StaffRepository;
 import com.example.university.repo.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -25,8 +24,7 @@ public class UniversityApplication implements CommandLineRunner {
 	@Autowired
 	DepartmentRepository departmentRepository;
 
-	@Autowired
-	StaffRepository staffRepository;
+
 
 	@Autowired
 	StudentRepository studentRepository;
@@ -42,7 +40,7 @@ public class UniversityApplication implements CommandLineRunner {
 		studentRepository.save(new Student(new Person("Maxi","Garcia"),fullTime,9));
 		studentRepository.save(new Student(new Person("Rocio","Garcia"),fullTime,12));
 		studentRepository.save(new Student(new Person("Silvia","Soria"),fullTime,51));
-
+/*
 		Staff juanPerez = staffRepository.save(new Staff(new Person("Juan","Perez")));
 		Staff pedroPerez = staffRepository.save(new Staff(new Person("Pedro","Perez")));
 		Staff profJulianPerez = staffRepository.save(new Staff(new Person("Julian","Perez")));
@@ -72,7 +70,7 @@ public class UniversityApplication implements CommandLineRunner {
 		Course literatura = courseRepository.save(new Course("Literatura",3,profFedericoPerez,cienciasSociales));
 		Course sociedadYEstado = courseRepository.save(new Course("Sociedad y Estado",3,profJulianPerez,cienciasSociales));
 		Course plastica = courseRepository.save(new Course("Plastica",3,profFedericoPerez,cienciasSociales));
-
+*/
 
 
 	}
